@@ -1,0 +1,67 @@
+.chart-legend,
+.bar-legend,
+.line-legend,
+.pie-legend,
+.radar-legend,
+.polararea-legend,
+.doughnut-legend {
+  list-style-type: none;
+  margin-top: 0px;
+  text-align: left;
+  margin-left: 0px;
+  /* NOTE: Browsers automatically add 40px of padding-left to all lists, so we should offset that, otherwise the legend is off-center */
+  -webkit-padding-start: 0;
+  /* Webkit */
+  -moz-padding-start: 0;
+  /* Mozilla */
+  padding-left: 0px;
+  /* IE (handles all cases, really, but we should also include the vendor-specific properties just to be safe) */
+}
+.chart-legend li,
+.bar-legend li,
+.line-legend li,
+/*.pie-legend li,*/
+.radar-legend li,
+.polararea-legend li,
+.doughnut-legend li {
+  display: inline-block;
+  white-space: nowrap;
+  position: relative;
+  margin-bottom: 4px;
+  border-radius: 5px;
+  padding: 2px 8px 2px 28px;
+  font-size: smaller;
+  cursor: default;
+}
+
+.pie-legend li{
+  white-space: nowrap;
+  position: relative;
+  left: 80px;
+  top:5px;
+  border-radius: 5px;
+  padding: 0px;
+  display: block;
+  font-size: smaller;
+  cursor: default;
+  padding-bottom: 5px;
+  padding-left: 12px;
+   line-height: 10px;
+}
+
+.chart-legend li span,
+.bar-legend li span,
+.line-legend li span,
+.pie-legend li span,
+.radar-legend li span,
+.polararea-legend li span,
+.doughnut-legend li span {
+  display: inline;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 10px;
+  height: 10px;
+
+  border-radius: 3px;
+}

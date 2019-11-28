@@ -1,0 +1,30 @@
+
+runtime: php55
+
+api_version: 1
+threadsafe: true
+
+handlers:
+
+
+- url: /assets/css
+  static_dir: assets/css
+
+- url: /assets/img
+  static_dir: assets/img
+
+- url: /assets/js
+  static_dir: assets/js
+
+
+- url: /.*
+  script: index.php
+
+env_variables:
+   
+    MYSQL_USER: 'root'
+    MYSQL_PASSWORD: 'Hello2019'
+    MYSQL_DSN: 'mysql:dbname=truevl;unix_socket=/cloudsql/truevl-1515835105404:asia-south1:truevlinstance'
+
+beta_settings:
+    cloud_sql_instances: 'truevl-1515835105404:asia-south1:truevlinstance'  
